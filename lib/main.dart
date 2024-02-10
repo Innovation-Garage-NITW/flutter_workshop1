@@ -1,28 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  List<int> items = [1, 2, 3, 4, 5];
   runApp(
     MaterialApp(
       title: "Flutter Workshop",
       home: Scaffold(
         appBar: AppBar(),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image.asset(
-                'assets/images/three.jpg',
-                width: 350,
-                height: 150,
-                fit: BoxFit.cover,
-              ),
-              Image.network(
-                'https://picsum.photos/250?image=9',
-                width: 350,
-                height: 150,
-                fit: BoxFit.cover,
-              ),
-            ],
+        body: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text('item ${items[index]}'),
           ),
         ),
       ),
