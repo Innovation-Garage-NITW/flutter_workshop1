@@ -7,14 +7,14 @@ void main() {
       // theme: ThemeData(fontFamily: 'Roboto'),
       home: Scaffold(
         appBar: AppBar(),
-        body: const Center(
-          child: Text(
-            'Inspiration',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Roboto',
+        body: Center(
+          child: Container(
+            padding: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+                color: Colors.red, borderRadius: BorderRadius.circular(15)),
+            child: const SizedBox(
+              height: 100,
+              width: 100,
             ),
           ),
         ),
