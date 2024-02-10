@@ -4,7 +4,6 @@ void main() {
   runApp(
     MaterialApp(
       title: "Flutter Workshop",
-      // theme: ThemeData(fontFamily: 'Roboto'),
       home: Scaffold(
         appBar: AppBar(),
         body: Center(
@@ -12,9 +11,10 @@ void main() {
             padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
                 color: Colors.red, borderRadius: BorderRadius.circular(15)),
-            child: const SizedBox(
-              height: 100,
-              width: 100,
+            child: const Icon(
+              Icons.audiotrack,
+              color: Colors.black,
+              size: 30.0,
             ),
           ),
         ),
