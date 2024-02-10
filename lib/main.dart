@@ -6,20 +6,21 @@ void main() {
       title: "Flutter Workshop",
       home: Scaffold(
         appBar: AppBar(),
-        body: const Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(
-                Icons.favorite,
-                color: Colors.pink,
-                size: 24.0,
-                semanticLabel: 'Text to announce in accessibility modes',
+              Image.asset(
+                'assets/images/three.jpg',
+                width: 350,
+                height: 150,
+                fit: BoxFit.cover,
               ),
-              Icon(
-                Icons.audiotrack,
-                color: Colors.green,
-                size: 30.0,
+              Image.network(
+                'https://picsum.photos/250?image=9',
+                width: 350,
+                height: 150,
+                fit: BoxFit.cover,
               ),
             ],
           ),
